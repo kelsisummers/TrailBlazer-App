@@ -27,6 +27,6 @@ We created this application to inspire our community of hikers, bikers and campe
 
 
 
-
+GitHub Pages: https://kelsisummers.github.io/projectOne/
 
 Copyright @ 2017 by University of Denver Bootcamp written by Kelsi, Molly, Lablanca & Steven.
