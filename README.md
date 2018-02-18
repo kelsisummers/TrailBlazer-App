@@ -39,5 +39,6 @@ Software Stack:
   - CSS
   - HTML
   - Materialize Framework
+  - Widgets
 
 Copyright @ 2017 by University of Denver Bootcamp written by Kelsi, Molly, Lablanca & Steven.
