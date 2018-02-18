@@ -1,4 +1,5 @@
-Project 1
+Group Project 1: TrailBlazer
+
 Voted Best UX/UI and Most Awe-Inspiring
 
 We’ve created a trail finder app that shows trails based on limited search criteria, whereby users can select a trail that matches their desired area, length, difficulty level, etc. In this application we used:
@@ -26,5 +27,13 @@ We created this application to inspire our community of hikers, bikers and campe
 
 
 GitHub Pages: https://kelsisummers.github.io/projectOne/
+
+Languages:
+  - Javascript
+  - CSS
+  - HTML
+  
+Framework:
+  - Materialize
 
 Copyright @ 2017 by University of Denver Bootcamp written by Kelsi, Molly, Lablanca & Steven.
