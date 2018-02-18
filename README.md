@@ -5,9 +5,11 @@ Voted Best UX/UI and Most Awe-Inspiring
 GitHub Pages: https://kelsisummers.github.io/projectOne/
 
 Description:
+
 We’ve created a trail finder app that shows trails based on limited search criteria, whereby users can select a trail that matches their desired area, length, difficulty level, etc. We created this application to inspire our community of fellow outdoor enthusiasts who love of an adventure.
 
 In this application we used:
+
   - AJAX call to Hiking Project API using latitude/longitude data from user input
   - Materialize CSS Framework
   - Local Storage (Store User Data)
@@ -16,7 +18,8 @@ In this application we used:
       - Data persistence to compile a checklist
   - Google Maps API
   
-  Projected Added Features
+Projected Added Features:
+  
   - Saved Searches and Saved Checklists w/ email functionality
   - Ability to revisit your Saved lists and comment on the trail
   - Add Google Directions functionality and time of arrival from Google Maps
