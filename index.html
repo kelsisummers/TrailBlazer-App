@@ -8,148 +8,136 @@
 
   <!-- JQuery -->
   <script src="https://code.jquery.com/jquery.js"></script>
-
   <!-- Firebase -->
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-
   <!-- Materialize CSS -->
-
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
   <link rel="stylesheet" href="assets/css/materialize.css">
-
   <!-- Slider CSS -->
   <link rel="stylesheet" type="text/css" href="assets/css/nouislider.css">
-
   <!-- Custom CSS -->
   <link rel="stylesheet" type="text/css" href="assets/css/landing-page.css">
-
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
 </head>
 <body>
-    <main>
+  <main>
 
-    <!-- Cover Image -->
-    <div id="cover">
-      <img class="responsive-img" src="assets/images/landing-page-cover.png" style:"position: relative">
-
-
-    <!-- Logo Image -->
-    <div class="logo-image">
-      <img src="assets/images/tblogo.png" alt="TrailBlazer" class="ctr">
-    </div>
-
-
-    <!-- User Input Form -->
-    <div class="row">
-    <div class="card form-container" >
-        <div class="card-content">
-
-        <!-- City Input -->
-        <div class="row">
-            <div class="input-field col s12 m6 l6">
-            <input id="city-input" type="text" class="validate">
-            <label for="city">City</label>
-            </div>
-        
-
-        <!-- State Input -->
-            <div class="input-field col s12 m6 l6">
-            <select id = 'state-input'>
-                <option value="state" disabled selected>State</option>
-                <option value="alabama">Alabama</option>
-                <option value="alaska">Alaska</option>
-                <option value="arizona">Arizona</option>
-                <option value="arkansas">Arkansas</option>
-                <option value="california">California</option>
-                <option value="colorado">Colorado</option>
-                <option value="connecticut">Connecticut</option>
-                <option value="delaware">Delaware</option>
-                <option value="florida">Florida</option>
-                <option value="georgia">Georgia</option>
-                <option value="hawaii">Hawaii</option>
-                <option value="idaho">Idaho</option>
-                <option value="illinois">Illinois</option>
-                <option value="indiana">Indiana</option>
-                <option value="iowa">Iowa</option>
-                <option value="kansas">Kansas</option>
-                <option value="kentucky">Kentucky</option>
-                <option value="louisiana">Louisiana</option>
-                <option value="maine">Maine</option>
-                <option value="maryland">Maryland</option>
-                <option value="massachusetts">Massachusetts</option>
-                <option value="michigan">Michigan</option>
-                <option value="minnesota">Minnesota</option>
-                <option value="mississippi">Mississippi</option>
-                <option value="missouri">Missouri</option>
-                <option value="montana">Montana</option>
-                <option value="nebraska">Nebraska</option>
-                <option value="nevada">Nevada</option>
-                <option value="newhampshire">New Hampshire</option>
-                <option value="newjersey">New Jersey</option>
-                <option value="newmexico">New Mexico</option>
-                <option value="newyork">New York</option>
-                <option value="northcarolina">North Carolina</option>
-                <option value="northdakota">North Dakota</option>
-                <option value="ohio">Ohio</option>
-                <option value="oklahoma">Oklahoma</option>
-                <option value="oregon">Oregon</option>
-                <option value="pennsylvania">Pennsylvania</option>
-                <option value="rhodeisland">Rhode Island</option>
-                <option value="southcarolina">South Carolina</option>
-                <option value="southdakota">South Dakota</option>
-                <option value="tennessee">Tennessee</option>
-                <option value="texas">Texas</option>
-                <option value="utah">Utah</option>
-                <option value="vermont">Vermont</option>
-                <option value="virginia">Virginia</option>
-                <option value="washington">Washington</option>
-                <option value="westvirginia">West Virginia</option>
-                <option value="wisconsin">Wisconsin</option>
-                <option value="wyoming">Wyoming</option>
-            </select>
-            </div>
-        </div>
-
-        <!-- Search Radius -->
-        <div class="row">
-            <label for="radius-input" class="radius">Search Radius</label>
-            <form action="#">
-            <p class="range-field">
-            <input type="range" id="radius-input" min="0" max="150" />
-            </p>
-            </form>
-            <label for="miles" class="miles">Miles: <span id="miles-value"></span></label>
-        </div>
-
-        <!-- Submit Button -->
-        <div id = 'submit-button'>
-            <a class="btn waves-effect lime darken-4" type="submit" id="submit-button">Search Trails</a>
-        </div>
+	<!-- Logo Image -->
+	<div class="nav">
+		<p class="tagline">Search. Plan. Explore.</p>
+		<a href='/'>
+			<img src="assets/images/logo_v2_black_sm.png" alt="TrailBlazer logo" class="logo">
+		</a>
+	</div>
+			
+	<!-- Cover Image -->
+	<div id="cover">
+		<img class="responsive-img" src="assets/images/landing-page-cover.png">
 
 
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+		<!-- User Input Form -->
+		<div class="row">
+			<div class="card form-container" >
+				<div class="card-content">
+					<div class="row">
 
-    <!-- Trail API -->
-    <div id = 'trail-container'>
-        <div id = 'trail-info'></div>
-    </div>
+						<!-- City Input -->
+						<div class="input-field col s12 m6 l6">
+							<input id="city-input" type="text" class="validate">
+							<label for="city">City</label>
+						</div>
+					
+						<!-- State Input -->
+						<div class="input-field col s12 m6 l6">
+							<select id = 'state-input'>
+								<option value="state" disabled selected>State</option>
+								<option value="alabama">Alabama</option>
+								<option value="alaska">Alaska</option>
+								<option value="arizona">Arizona</option>
+								<option value="arkansas">Arkansas</option>
+								<option value="california">California</option>
+								<option value="colorado">Colorado</option>
+								<option value="connecticut">Connecticut</option>
+								<option value="delaware">Delaware</option>
+								<option value="florida">Florida</option>
+								<option value="georgia">Georgia</option>
+								<option value="hawaii">Hawaii</option>
+								<option value="idaho">Idaho</option>
+								<option value="illinois">Illinois</option>
+								<option value="indiana">Indiana</option>
+								<option value="iowa">Iowa</option>
+								<option value="kansas">Kansas</option>
+								<option value="kentucky">Kentucky</option>
+								<option value="louisiana">Louisiana</option>
+								<option value="maine">Maine</option>
+								<option value="maryland">Maryland</option>
+								<option value="massachusetts">Massachusetts</option>
+								<option value="michigan">Michigan</option>
+								<option value="minnesota">Minnesota</option>
+								<option value="mississippi">Mississippi</option>
+								<option value="missouri">Missouri</option>
+								<option value="montana">Montana</option>
+								<option value="nebraska">Nebraska</option>
+								<option value="nevada">Nevada</option>
+								<option value="newhampshire">New Hampshire</option>
+								<option value="newjersey">New Jersey</option>
+								<option value="newmexico">New Mexico</option>
+								<option value="newyork">New York</option>
+								<option value="northcarolina">North Carolina</option>
+								<option value="northdakota">North Dakota</option>
+								<option value="ohio">Ohio</option>
+								<option value="oklahoma">Oklahoma</option>
+								<option value="oregon">Oregon</option>
+								<option value="pennsylvania">Pennsylvania</option>
+								<option value="rhodeisland">Rhode Island</option>
+								<option value="southcarolina">South Carolina</option>
+								<option value="southdakota">South Dakota</option>
+								<option value="tennessee">Tennessee</option>
+								<option value="texas">Texas</option>
+								<option value="utah">Utah</option>
+								<option value="vermont">Vermont</option>
+								<option value="virginia">Virginia</option>
+								<option value="washington">Washington</option>
+								<option value="westvirginia">West Virginia</option>
+								<option value="wisconsin">Wisconsin</option>
+								<option value="wyoming">Wyoming</option>
+							</select>
+						</div>
+					</div>
+					
+					<!-- Search Radius -->
+					<div class="row">
+						<label for="radius-input" class="radius">Search Radius</label>
+						<form action="#">
+						<p class="range-field">
+						<input type="range" id="radius-input" min="0" max="150" />
+						</p>
+						</form>
+						<label for="miles" class="miles">Miles: <span id="miles-value"></span></label>
+					</div>
+					
+					<!-- Submit Button -->
+					<div id = 'submit-button'>
+						<a class="btn waves-effect lime darken-4" type="submit" id="submit-button">Search Trails</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
+  <!-- Trail API -->
+	<div id='trail-container'>
+    <div id='trail-info'></div>
+  </div>
 </main>
 
-
-    <!-- Materialize JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-
-    <!-- Custom Javascript -->
-    <script type="text/javascript" src="assets/javascript/main.js"></script>
-
-    <!-- Slider Javascript -->
-    <script type="text/javascript" src="assets/javascript/nouislider.js"></script>
-
+<!-- Materialize JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<!-- Custom Javascript -->
+<script type="text/javascript" src="assets/javascript/main.js"></script>
+<!-- Slider Javascript -->
+<script type="text/javascript" src="assets/javascript/nouislider.js"></script>
 
 </body>
 </html>

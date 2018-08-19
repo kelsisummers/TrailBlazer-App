@@ -1,58 +1,83 @@
 /* Logo Image Style */
-.ctr {
-    position: absolute;
-    top: 65px;
-    left: 17%;
-    width: 60%;
-    z-index: 2;
+main {
+	display: grid;
+	grid-template-areas: "nav" "cover" "results";
+	grid-template-rows: 100px auto auto;
+}
+
+.nav {
+	grid-area: nav;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-right: 25px;
+	margin-left: 25px;
+}
+
+#cover{
+	grid-area: cover;
+	position: relative;
+}
+
+.logo {
+  width: 150px;
 } 
+
+img.responsive-img{
+	width: 100vw;
+}
+
+.tagline {
+	font-family: 'Amatic SC', cursive;
+	font-size: 1.875rem;
+}
 
 /* Form Field Container Styling */
 .form-container {
-    width: 35vw;
-    background: rgba(255,255,255, 0.85);
-    position: absolute;
-    top: 30%;
-    left: 32%;
-    border-radius: 10px;
+  width: 35vw;
+  background: rgba(255,255,255, 0.85);
+  position: absolute;
+  top: 30%;
+  left: 32%;
+  border-radius: 10px;
 }
 
 /* Trail Thumbnail/Info Styling */
 .thumbnail {
-    max-height: 300px;
+  max-height: 300px;
 }
 
 .trail {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 .row-1, .row-2, .row-3 {
-    margin-top: 30px;
-    margin-left: 25px;
+  margin-top: 30px;
+  margin-left: 25px;
 }
 
 #trail-container {
-    margin-top: 100px;
+	/* margin-top: 100px; */
+	grid-area: results;
 }
 
 /* Responsive CSS*/
 @media screen and (max-width: 1200px) {
-    .form-container {
-        top: 225px;
-        width: 40vw;
-        left: 30%;
-    }
-
+  .form-container {
+    top: 225px;
+    width: 40vw;
+    left: 30%;
+  }
 }
 
 @media screen and (max-width: 1025px) {
-    .form-container {
-        width: 100vw;
-        position: static;
-    }
-    #trail-container {
-        margin-top: 50px;
-    }
+  .form-container {
+    width: 100vw;
+    position: static;
+  }
+  #trail-container {
+  	/* margin-top: 50px; */
+  }
 }
 
 
