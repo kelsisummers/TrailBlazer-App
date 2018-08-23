@@ -18,7 +18,7 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" type="text/css" href="assets/css/landing-page.css">
 	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Cambay|Metrophobic" rel="stylesheet">
 </head>
 <body>
   <main>
@@ -33,23 +33,25 @@
 			
 	<!-- Cover Image -->
 	<div id="cover">
-		<img class="responsive-img" src="assets/images/landing-page-cover.png">
+		<img class="responsive-img" src="assets/images/cover-image-cropped_small.png">
+	</div>
 
 
 		<!-- User Input Form -->
+		<div class="form-wrapper">
 		<div class="row">
 			<div class="card form-container" >
 				<div class="card-content">
-					<div class="row">
+					<!-- <div class="row"> -->
 
 						<!-- City Input -->
-						<div class="input-field col s12 m6 l6">
+						<div class="input-field col s6 m2 l2">
 							<input id="city-input" type="text" class="validate">
 							<label for="city">City</label>
 						</div>
 					
 						<!-- State Input -->
-						<div class="input-field col s12 m6 l6">
+						<div class="input-field col s6 m2 l2">
 							<select id = 'state-input'>
 								<option value="state" disabled selected>State</option>
 								<option value="alabama">Alabama</option>
@@ -104,25 +106,25 @@
 								<option value="wyoming">Wyoming</option>
 							</select>
 						</div>
-					</div>
+					<!-- </div> -->
 					
 					<!-- Search Radius -->
-					<div class="row">
-						<label for="radius-input" class="radius">Search Radius</label>
+					<div class="col s12 m4 l4">
+						<label for="radius-input" class="radius">Search Radius: <span id="miles-value"> </span></label>
 						<form action="#">
 						<p class="range-field">
 						<input type="range" id="radius-input" min="0" max="150" />
 						</p>
 						</form>
-						<label for="miles" class="miles">Miles: <span id="miles-value"></span></label>
 					</div>
 					
 					<!-- Submit Button -->
 					<div id = 'submit-button'>
-						<a class="btn waves-effect lime darken-4" type="submit" id="submit-button">Search Trails</a>
+						<a class="btn waves-effect" type="submit" id="submit-button">Search Trails</a>
 					</div>
 				</div>
 			</div>
+		</div>
 		</div>
 	</div>
 

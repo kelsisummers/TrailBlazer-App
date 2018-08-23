@@ -1,8 +1,12 @@
 /* Logo Image Style */
 main {
 	display: grid;
-	grid-template-areas: "nav" "cover" "results";
-	grid-template-rows: 100px auto auto;
+	grid-template-areas: "nav" "cover" "form" "results";
+	grid-template-rows: 100px auto auto auto;
+}
+
+body{
+  font-family: 'Cambay', sans-serif;
 }
 
 .nav {
@@ -12,6 +16,41 @@ main {
 	align-items: center;
 	margin-right: 25px;
 	margin-left: 25px;
+}
+.form-wrapper .card {
+  box-shadow: none;
+}
+
+a#trail-link {
+  color: #004356;
+  font-weight: 700;
+}
+
+.form-wrapper .card .card-content {
+  height: fit-content;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 50px;
+  flex-wrap: wrap;
+}
+
+.trail .card-content{
+  height: 200px;
+  overflow: scroll;
+  padding: 20px;
+}
+
+.card .card-image .card-title {
+  z-index: 2;
+}
+
+.row .col.l2 {
+  margin-left: 0;
+}
+
+.row .col.l4 {
+  margin-left: 0;
 }
 
 #cover{
@@ -27,6 +66,36 @@ img.responsive-img{
 	width: 100vw;
 }
 
+.card .card-image img {
+  object-fit: cover;
+  height: 250px;
+}
+
+.card .card-image {
+  overflow: hidden;
+}
+
+.card-image:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.8));
+  z-index: 0;
+}
+
+.form-wrapper {
+  grid-area: form;
+  height: fit-content;
+}
+
+.form-wrapper .row{
+  margin-bottom: 0px;
+}
+
 .tagline {
 	font-family: 'Amatic SC', cursive;
 	font-size: 1.875rem;
@@ -34,12 +103,17 @@ img.responsive-img{
 
 /* Form Field Container Styling */
 .form-container {
-  width: 35vw;
+  margin: 0;
+  /* width: 35vw;
   background: rgba(255,255,255, 0.85);
   position: absolute;
   top: 30%;
   left: 32%;
-  border-radius: 10px;
+  border-radius: 10px; */
+}
+
+.radius{
+  font-size: 1rem;
 }
 
 /* Trail Thumbnail/Info Styling */
@@ -62,6 +136,15 @@ img.responsive-img{
 }
 
 /* Responsive CSS*/
+@media screen and (max-width: 1200px) {
+  .nav {
+    align-items: baseline;
+  }
+  .tagline{
+    font-size: 1.25rem;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .form-container {
     top: 225px;
