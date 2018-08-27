@@ -77,7 +77,7 @@ h3 {
 
 .map {
   grid-area: google;
-  border-top: 1px solid black;
+  /* border-top: 1px solid black; */
 }
 
 /* Checklist Styles */
