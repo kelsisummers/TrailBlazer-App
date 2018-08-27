@@ -5,24 +5,96 @@ h1 {
 
 }
 
+.logo {
+  width: 150px;
+} 
+
+body{
+  font-family: 'Cambay', sans-serif;
+}
+
+.tagline {
+	font-family: 'Amatic SC', cursive;
+	font-size: 1.875rem;
+}
+
+
+.trail-info-container{
+  display: grid;
+  grid-template-areas:  "nav nav"
+                        "weather weather"
+                        "trail trail"
+                        "google google";
+  grid-template-rows: 100px auto 1fr auto;
+  grid-template-columns: repeat(2, 1fr);
+}
+
 #googlemap {
     text-align: center;
+}
+
+.nav {
+	grid-area: nav;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-right: 25px;
+	margin-left: 25px;
+}
+
+.trail-info{
+  /* width: 50vw; */
+}
+
+.form-checklist {
+  height: 50vh;
 }
 
 #map {
     width: 100%;
     height: 500px;
     margin: 0 auto;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     position: absolute,
 }
 
-.info-container {
-    position: absolute;
-    top: 20px;
-    left: 25%;
-    width: 50%;
-    border-radius: 10px;
+.card {
+  margin: 0px;
+}
+
+
+form#checklist {
+  display: flex;
+  max-height: 350px;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.to-do{
+  /* grid-area: todo; */
+}
+
+#info-container {
+    /* position: absolute; */
+    /* top: 20px; */
+    /* left: 25%; */
+    /* width: 50%; */
+    /* border-radius: 10px; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 25px;
+    margin: 25px;
+    /* margin-right: 25px; */
+    padding: 0;
+    grid-area: trail
+}
+
+.weather-widget{
+  grid-area: weather;
+}
+
+.map{
+  grid-area: google;
 }
 
 h3 {
@@ -58,6 +130,30 @@ h3 {
      max-height: 550px;
  }
 
+ #trail-widget {
+  overflow: scroll;
+  /* background-color: white; */
+}
+
+ @media screen and (max-width: 1400px) {
+  .card-image img {
+    object-fit: cover
+  }
+  #info-container{
+    grid-template-columns: none;
+    grid-row-gap: 25px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .nav {
+    align-items: baseline;
+  }
+  .tagline{
+    font-size: 1.25rem;
+  }
+}
+
  @media screen and (max-width: 610px) {
     .info-container {
         width: 100vw;
@@ -70,4 +166,13 @@ h3 {
         margin-left: 0px;
         margin-top: -5px;
     }
+}
+
+@media screen and (max-width: 400px) {
+  #info-container {
+    margin: 20px 0;
+  }
+  .card .card-reveal {
+    padding: 5px;
+  }
 }
