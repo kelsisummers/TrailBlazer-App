@@ -20,6 +20,8 @@ h3 {
 
 .weather-widget {
   grid-area: weather;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 #trail-widget {
@@ -75,6 +77,7 @@ h3 {
 
 .map {
   grid-area: google;
+  border-top: 1px solid black;
 }
 
 /* Checklist Styles */
