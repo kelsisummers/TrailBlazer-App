@@ -1,14 +1,15 @@
-/* Logo Image Style */
+/* General Styles */
+body {
+  font-family: 'Cambay', sans-serif;
+}
+
 main {
 	display: grid;
 	grid-template-areas: "nav" "cover" "form" "results";
 	grid-template-rows: 100px auto auto auto;
 }
 
-body{
-  font-family: 'Cambay', sans-serif;
-}
-
+/* Logo and Image Style */
 .nav {
 	grid-area: nav;
 	display: flex;
@@ -17,12 +18,32 @@ body{
 	margin-right: 25px;
 	margin-left: 25px;
 }
+
+.tagline {
+	font-family: 'Amatic SC', cursive;
+	font-size: 1.875rem;
+}
+
+#cover {
+	grid-area: cover;
+	position: relative;
+}
+
+.logo {
+  width: 150px;
+} 
+
+img.responsive-img {
+	width: 100vw;
+}
+
+/* Card Styles */
 .form-wrapper .card {
   box-shadow: none;
 }
 
 a#trail-link {
-  color: #004356;
+  color: #1a66a5;
   font-weight: 700;
 }
 
@@ -35,7 +56,7 @@ a#trail-link {
   flex-wrap: wrap;
 }
 
-.trail .card-content{
+.trail .card-content {
   height: 200px;
   overflow: scroll;
   padding: 20px;
@@ -53,19 +74,6 @@ a#trail-link {
   margin-left: 0;
 }
 
-#cover{
-	grid-area: cover;
-	position: relative;
-}
-
-.logo {
-  width: 150px;
-} 
-
-img.responsive-img{
-	width: 100vw;
-}
-
 .card .card-image img {
   object-fit: cover;
   height: 250px;
@@ -75,6 +83,7 @@ img.responsive-img{
   overflow: hidden;
 }
 
+/* Adds Gradient Overlay */
 .card-image:after {
   content: '';
   display: block;
@@ -96,20 +105,9 @@ img.responsive-img{
   margin-bottom: 0px;
 }
 
-.tagline {
-	font-family: 'Amatic SC', cursive;
-	font-size: 1.875rem;
-}
-
 /* Form Field Container Styling */
 .form-container {
   margin: 0;
-  /* width: 35vw;
-  background: rgba(255,255,255, 0.85);
-  position: absolute;
-  top: 30%;
-  left: 32%;
-  border-radius: 10px; */
 }
 
 .radius{
@@ -131,12 +129,10 @@ img.responsive-img{
 }
 
 #trail-container {
-	/* margin-top: 100px; */
 	grid-area: results;
 }
 
-
-/* Responsive CSS*/
+/* Responsive Queries */
 @media screen and (max-width: 1200px) {
   .nav {
     align-items: baseline;
@@ -158,9 +154,6 @@ img.responsive-img{
   .form-container {
     width: 100vw;
     position: static;
-  }
-  #trail-container {
-  	/* margin-top: 50px; */
   }
 }
 

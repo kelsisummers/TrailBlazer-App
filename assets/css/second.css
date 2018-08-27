@@ -1,24 +1,56 @@
-h1 {
-    font-size: 20px;
-    color: #1a66a5;
-    text-transform: uppercase;
+/* General Styles */
+body {
+  font-family: 'Cambay', sans-serif;
+}
 
+h1 {
+  font-size: 20px;
+  color: #1a66a5;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card {
+  margin: 0px;
+}
+
+.weather-widget {
+  grid-area: weather;
+}
+
+#trail-widget {
+  overflow: scroll;
+}
+
+/* #new-search {
+  background-color: #1a66a5;
+  margin-top: 20px;
+} */
+
+/* Logo Styles */
+.nav {
+	grid-area: nav;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-right: 25px;
+	margin-left: 25px;
 }
 
 .logo {
   width: 150px;
 } 
 
-body{
-  font-family: 'Cambay', sans-serif;
-}
-
 .tagline {
 	font-family: 'Amatic SC', cursive;
 	font-size: 1.875rem;
 }
 
-
+/* Sets up Page Grid */
 .trail-info-container{
   display: grid;
   grid-template-areas:  "nav nav"
@@ -29,40 +61,23 @@ body{
   grid-template-columns: repeat(2, 1fr);
 }
 
+/* Map Styles */
 #googlemap {
-    text-align: center;
-}
-
-.nav {
-	grid-area: nav;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-right: 25px;
-	margin-left: 25px;
-}
-
-.trail-info{
-  /* width: 50vw; */
-}
-
-.form-checklist {
-  height: 50vh;
+  text-align: center;
 }
 
 #map {
-    width: 100%;
-    height: 500px;
-    margin: 0 auto;
-    /* border-radius: 10px; */
-    position: absolute,
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  position: absolute,
 }
 
-.card {
-  margin: 0px;
+.map {
+  grid-area: google;
 }
 
-
+/* Checklist Styles */
 form#checklist {
   display: flex;
   max-height: 350px;
@@ -70,72 +85,36 @@ form#checklist {
   flex-wrap: wrap;
 }
 
-.to-do{
-  /* grid-area: todo; */
+#submit-item {
+  background-color: #1a66a5;
 }
 
+i.right {
+  margin-left: 0px;
+}
+
+#add-item {
+  border-bottom: 1px solid #1a66a5;
+  box-shadow: 0 1px 0 0 #1a66a5;
+}
+
+[type="checkbox"]:checked+label:before {
+  border-right: 2px solid #1a66a5;
+  border-bottom: 2px solid #1a66a5;
+}
+
+/* Sets Up Grid for Trail Info. */
 #info-container {
-    /* position: absolute; */
-    /* top: 20px; */
-    /* left: 25%; */
-    /* width: 50%; */
-    /* border-radius: 10px; */
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 25px;
-    margin: 25px;
-    /* margin-right: 25px; */
-    padding: 0;
-    grid-area: trail
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 25px;
+  margin: 25px;
+  padding: 0;
+  grid-area: trail
 }
 
-.weather-widget{
-  grid-area: weather;
-}
-
-.map{
-  grid-area: google;
-}
-
-h3 {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-
- i.right {
-     margin-left: 0px;
- }
-
- #submit-item {
-   background-color: #1a66a5;
- }
-
- #add-item {
-   border-bottom: 1px solid #1a66a5;
-   box-shadow: 0 1px 0 0 #1a66a5;
- }
-
- [type="checkbox"]:checked+label:before {
-   border-right: 2px solid #1a66a5;
-   border-bottom: 2px solid #1a66a5;
- }
-
- #new-search {
-   background-color: #1a66a5;
-   margin-top: 20px;
- }
-
- #main-image{
-     max-height: 550px;
- }
-
- #trail-widget {
-  overflow: scroll;
-  /* background-color: white; */
-}
-
- @media screen and (max-width: 1400px) {
+/* Start of Responsive Queries */
+@media screen and (max-width: 1400px) {
   .card-image img {
     object-fit: cover
   }
@@ -155,17 +134,17 @@ h3 {
 }
 
  @media screen and (max-width: 610px) {
-    .info-container {
-        width: 100vw;
-        left: 0px;
-    }
+  .info-container {
+    width: 100vw;
+    left: 0px;
+  }
 }
 
- @media screen and (max-width: 610px) {
-    i.right {
-        margin-left: 0px;
-        margin-top: -5px;
-    }
+@media screen and (max-width: 610px) {
+  i.right {
+    margin-left: 0px;
+    margin-top: -5px;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -175,4 +154,8 @@ h3 {
   .card .card-reveal {
     padding: 5px;
   }
+  .card .card-title{
+    font-size: 20px;
+  }
 }
+/* End of Responsive Queries */
