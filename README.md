@@ -2,7 +2,7 @@ Group Project: TrailBlazer
 
 <strong>Voted Best UX/UI and Most Awe-Inspiring</strong>
 
-GitHub Pages: https://kelsisummers.github.io/TrailBlazer-App/
+<strong>Hosted App Link: https://kelsisummers.github.io/TrailBlazer-App/</strong>
 
 Description:
 
