@@ -1,4 +1,4 @@
-Group Project: TrailBlazer
+# TrailBlazer-App
 
 <strong>Voted Best UX/UI and Most Awe-Inspiring</strong>
 
